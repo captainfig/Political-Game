@@ -1,1 +1,1 @@
-{"playerciv": [{"growthRate": 0.002, "happiness": 0, "truePop": 41.0, "nationName": "a", "leaderName": "b", "seed": null, "population": 41, "py/object": "civilization.Civilization"}]}
+{"playerciv": [{"growthRate": 0.02, "nationName": "Barnard", "seed": null, "happiness": 0, "py/object": "civilization.Civilization", "truePop": 37.0, "population": 37, "leaderName": "Barnardia"}]}

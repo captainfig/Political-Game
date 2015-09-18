@@ -29,6 +29,7 @@ def createCiv():
     civ = civilization.Civilization(nation, leader, seed)
     state = dict()
     state['playerciv'] = [civ]
+    print("Hello, " + civ.leaderName + ", great leader of " + civ.nationName + ". Your people need you.")
     return state
 
 def passTurn():
@@ -38,7 +39,7 @@ def passTurn():
 
 def gamePrompt():
     
-    action = input('What would you like to do, great leader? ')
+    action = input('What would you like to do? ')
     if action == 'new':
         createCiv()
     if action == 'save':
@@ -63,6 +64,7 @@ def gameloop():
     global civ
     global turn_count
     civ = game_state['playerciv'][0]
+    print("Hello, " + civ.leaderName + ", great leader of " + civ.nationName + ". Your people need you.")
     while True:                   
         
         currentCivState = getStatus()
@@ -76,10 +78,10 @@ def main():
     if not os.path.isfile(SAVEFILE):
         game_state = createCiv()
         saveCiv()
-        print("Hello, " + civ.leaderName + ", great leader of " + civ.nationName + ". Your people need you.")
+        
     else:
         game_state = loadCiv()
-        print("Hello, " + civ.leaderName + ", great leader of " + civ.nationName + ". Your people need you.")
+        
     gameloop()
     sys.exit()
     
